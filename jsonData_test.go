@@ -1,10 +1,8 @@
-package litjson_test
+package litjson
 
 import (
 	"fmt"
 	"testing"
-
-	"plutus/utils/litjson"
 )
 
 type binaryStr struct {
@@ -15,7 +13,7 @@ func Test1(t *testing.T) {
 	bs := binaryStr{
 		BB: []byte{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11},
 	}
-	buf, _ := litjson.Marshal(bs)
+	buf, _ := Marshal(bs)
 	fmt.Printf("js: %s", string(buf))
 }
 
